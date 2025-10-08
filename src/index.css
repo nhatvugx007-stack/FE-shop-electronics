@@ -1,0 +1,132 @@
+/* Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+/* Slick Carousel overrides */
+.slick-slide {
+  padding: 0 8px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #999;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #10B981; /* Tailwind green-500 */
+}
+
+/* Hero Banner */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Overlay effect */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Product Cards Hover */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card img {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.product-card .overlay {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.product-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Footer links hover */
+footer a:hover {
+  color: #10B981;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .slick-slide {
+    padding: 0 4px;
+  }
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-banner h1 {
+    font-size: 1.5rem;
+  }
+  .hero-banner p {
+    font-size: 0.875rem;
+  }
+}
